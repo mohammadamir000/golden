@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0e14"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css"><title>PS4 Golden Host</title></head>
+<body>
+<header><div class="brand"><b>PS4</b><span><strong>GOLDEN HOST</strong><small>OFFLINE HOST MANAGER · V2</small></span></div><span class="connection"><i id="dot"></i><span id="connection">در حال بررسی</span></span></header>
+<main>
+<section class="hero"><label>PLAYSTATION 4 · OFFLINE TOOLKIT</label><h1>مرکز مدیریت <em>Golden Host</em></h1><p>فریمور را انتخاب کن و وضعیت کش آفلاین را بررسی کن.</p>
+<div class="actions"><button class="gold" id="run">▶ اجرای آزمایشی</button><button id="cache">ذخیره برای حالت آفلاین</button><button id="check">بررسی کش</button></div>
+<div class="notice">این نسخه رابط آزمایشی است؛ فایل اکسپلویت یا Payload واقعی GoldenHEN ندارد. دکمه اجرا فقط پیام آزمایشی نشان می‌دهد و چیزی روی کنسول اجرا نمی‌کند.</div></section>
+<section class="panel"><label>FIRMWARE SELECTOR</label><h2>انتخاب نسخه فریمور</h2><div id="firmwares" class="versions"></div><div class="selected"><span>فریمور انتخاب‌شده</span><b id="selected">9.00</b></div><p class="hint">انتخاب نسخه فقط برای رابط است و سازگاری اکسپلویت را تأیید نمی‌کند.</p></section>
+<section class="panel"><label>PAYLOAD CENTER</label><h2>مرکز Payload</h2><div class="payloads">
+<article><b>GoldenHEN</b><small>Payload اصلی · فایل موجود نیست</small><span>آماده‌نشده</span><button data-name="GoldenHEN">جزئیات</button></article>
+<article><b>BinLoader</b><small>بارگذاری Payload خارجی · فایل موجود نیست</small><span>آماده‌نشده</span><button data-name="BinLoader">جزئیات</button></article>
+<article><b>Debug Settings</b><small>گزینه نمایشی · اجرای واقعی در دسترس نیست</small><span>آماده‌نشده</span><button data-name="Debug Settings">جزئیات</button></article></div><p class="hint">هیچ Payloadی از راه دور دریافت یا اجرا نمی‌شود.</p></section>
+<div class="twocol"><section class="panel"><label>OFFLINE STATUS</label><h2>وضعیت کش</h2><b id="cacheState">در حال بررسی…</b><div class="bar"><i id="progress"></i></div><p class="hint" id="cacheDetail">فایل‌های رابط برای استفاده آفلاین ذخیره می‌شوند.</p></section>
+<section class="panel"><label>TEST STATUS</label><h2>وضعیت اجرا</h2><b id="runState">منتظر انتخاب کاربر</b><p class="hint" id="runDetail">اجرای واقعی هنوز در این نسخه وجود ندارد.</p></section></div>
+<section class="panel"><label>LOCAL RESOURCES</label><h2>فایل‌های رابط</h2><p class="resource">index.html <span>صفحه اصلی</span></p><p class="resource">style.css <span>قالب ظاهری</span></p><p class="resource">app.js <span>مدیریت برنامه</span></p><p class="resource">sw.js <span>مدیر کش</span></p></section>
+<footer>GOLDEN HOST V2 · رابط آزمایشی غیررسمی · بدون Payload اجرایی</footer></main>
+<div id="modal" hidden><div class="dialog"><button id="close" class="close">×</button><label>TEST MODE</label><h2 id="modalTitle">اجرای آزمایشی</h2><p id="modalText"></p><button class="gold" id="ok">متوجه شدم</button></div></div>
+<script src="./app.js"></script></body></html>
