@@ -17,3 +17,9 @@ Service workers require HTTPS or localhost. Opening `index.html` directly as a `
 - Firmware entries are UI choices only; they do not assert exploit compatibility.
 - Offline cache stores this website shell only.
 - A real PS4 browser and console are required to validate console-specific behavior.
+
+
+
+
+
+
