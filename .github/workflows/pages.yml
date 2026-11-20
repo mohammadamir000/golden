@@ -1,0 +1,41 @@
+name: Deploy AmirGem PS4 9.00 Host
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download upstream PSFree source
+        run: |
+          git clone --depth 1 https://github.com/kmeps4/PSFree.git upstream
+          mkdir public
+          cp -a upstream/. public/
+          test -f public/index.html
+          test -f public/psfree.mjs
+          test -f public/lapse.mjs
+          test -f public/goldhen.bin
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publish site
+        id: deployment
+        uses: actions/deploy-pages@v4
